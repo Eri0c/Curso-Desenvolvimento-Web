@@ -271,7 +271,10 @@ footer p {
     font-weight: 400;
     font-size: 16px;
 }
-
+/*Consertando bug scroll-x do IE e EDGE.*/
+body{
+    overflow-x: hidden;
+}
 
 section.erro-404 h2{
     

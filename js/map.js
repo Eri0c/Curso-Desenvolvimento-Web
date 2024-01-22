@@ -71,3 +71,6 @@ function addMarker(lat,long,icon,content,showInfoWindow,openInfoWindow){
     		infoWindow.open(map, marker);
     	}
 }
+	initialize();
+	addMarker(-27.609959, -48.576585,'',"Minha Casa",false,true);
+	

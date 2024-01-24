@@ -16,7 +16,8 @@
     <meta charset="UTF-8">
 </head>
 <body>
-
+    <base base="<?php echo INCLUDE_PATH; ?>"/>
+    
     <?php 
         $url = isset($_GET['url']) ? $_GET['url'] : 'home';
         switch ($url) {
@@ -41,7 +42,7 @@
                 <li><a href="<?php echo INCLUDE_PATH;?>">Home</a></li>
                 <li><a href="<?php echo INCLUDE_PATH;?>depoimentos">Depoimentos</a></li>
                 <li><a href="<?php echo INCLUDE_PATH;?>servicos">Serviços</a></li>
-                <li><a href="<?php echo INCLUDE_PATH;?>contato">Contato</a></li>
+                <li><a realtime="contato" href="<?php echo INCLUDE_PATH;?>contato">Contato</a></li>
             </ul>
         </nav>
         <nav class="mobile right">
@@ -52,12 +53,13 @@
                 <<li><a href="<?php echo INCLUDE_PATH;?>">Home</a></li>
                 <li><a href="<?php echo INCLUDE_PATH;?>depoimentos">Depoimentos</a></li>
                 <li><a href="<?php echo INCLUDE_PATH;?>servicos">Serviços</a></li>
-                <li><a href="<?php echo INCLUDE_PATH;?>contato">Contato</a></li>
+                <li><a realtime="contato" href="<?php echo INCLUDE_PATH;?>contato">Contato</a></li>
             </ul>
         </nav>
         </div><!--center-->
         <div class="clear"></div><!--clear-->
     </header>
+    <div class="container-principal">
 
     <?php 
     
@@ -77,6 +79,7 @@
     
     ?>
    
+   </div><!--container-principal-->
 
    <footer <?php if(isset($pagina404) && $pagina404 == true) echo 'class="fixed"'; ?>>
     <div class="center">

@@ -13,6 +13,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" contents="palavras-chave,do,meu,site">
     <meta name="description" content="Descrição do meu website">
+    <link rel="icon" href="<?php echo INCLUDE_PATH; ?>favicon.ico" type="image/x-icon"/>
     <meta charset="UTF-8">
 </head>
 <body>
@@ -43,6 +44,7 @@
                 <li><a href="<?php echo INCLUDE_PATH;?>depoimentos">Depoimentos</a></li>
                 <li><a href="<?php echo INCLUDE_PATH;?>servicos">Serviços</a></li>
                 <li><a realtime="contato" href="<?php echo INCLUDE_PATH;?>contato">Contato</a></li>
+                <li><a realtime="outro-menu" href="<?php echo INCLUDE_PATH;?>outro-menu">Outro menu</a></li>
             </ul>
         </nav>
         <nav class="mobile right">
@@ -53,11 +55,12 @@
                 <<li><a href="<?php echo INCLUDE_PATH;?>">Home</a></li>
                 <li><a href="<?php echo INCLUDE_PATH;?>depoimentos">Depoimentos</a></li>
                 <li><a href="<?php echo INCLUDE_PATH;?>servicos">Serviços</a></li>
-                <li><a realtime="contato" href="<?php echo INCLUDE_PATH;?>contato">Contato</a></li>
+                <li><a realtime="contato" href="<?php echo INCLUDE_PATH; ?>contato">Contato</a></li>
+                <li><a realtime="outro-menu" href="<?php echo INCLUDE_PATH; ?>outro-menu">Outro menu</a></li>
             </ul>
         </nav>
-        </div><!--center-->
         <div class="clear"></div><!--clear-->
+    </div><!--center-->
     </header>
     <div class="container-principal">
 
@@ -99,5 +102,6 @@
    <script defer src='https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyDHPNQxozOzQSZ-djvWGOBUsHkBUoT_qH4&callback=Function.prototype'></script>
    <script src="<?php  echo INCLUDE_PATH; ?>js/map.js"></script>
     <?php } ?>        
+    <script src="<?php echo INCLUDE_PATH; ?>js/exemplo.js"></script>
 </body>
 </html>

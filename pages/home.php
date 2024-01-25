@@ -5,9 +5,36 @@
     <div style="background-image: url('<?php echo INCLUDE_PATH; ?>images/bg.jpg');" class="banner-single"></div><!--banner-single-->
         <div class="overlay"></div><!--overlay-->
         <div class="center">
-        <form>
+            <?php 
+                if(isset($_POST['acao'])){
+                    //Enviei o formulario
+                    if($_POST['email'] != ''){
+                        $email = $_POST['email'];
+                        if(filter_var($email, FILTER_VALIDATE_EMAIL)){
+                            //tudo certom é um email.
+                            //só enviar
+                            $mail = new Email('aquivaimeuhost','aqui meu user name da host','aqui a senha do host', 'nome da pessoa');
+                            $mail->addAdress('ericmoraes1998@gmail.com','Eric');
+                            $corpo= "Email cadastrado na home do site: <hr>$email";
+                            $info = array('assunto'=>'um novo email cadastrado no site','corpo'=>$corpo);
+                            $mail->formatarEmail($info);
+                            if($mail->enviarEmail()){
+                                echo 'Enviado com sucesso!';
+                            }else{
+                                echo 'Algo deu errado';
+                            }
+                        }else{
+                            echo 'Não é um email valido.';
+                        }
+                        
+                    }else{
+                        echo 'Insira um email válido.';
+                    }
+                }
+            ?>
+        <form method="post">
             <h2>Qual o seu melhor e-mail?</h2>
-            <input type="email" name="required">
+            <input type="email" name="email" required>
             <input type="submit" name="acao" value="Cadastrar!">
         </form>
         </div><!--center-->

@@ -6,10 +6,10 @@
         private $mailer;
         public function __construct($host,$username,$senha,$name)
         {
-            $this->mailer = new PHPMailer(true);
+            $this->mailer = new PHPMailer;
 
             //Server settings
-            $this->mailer->SMTPDebug = SMTP::DEBUG_SERVER;                      //Enable verbose debug output
+                            
             $this->mailer->isSMTP();                                            //Send using SMTP
             $this->mailer->Host       = $host;                     //Preciso ter uma host
             $this->mailer->SMTPAuth   = true;                                   //Enable SMTP authentication

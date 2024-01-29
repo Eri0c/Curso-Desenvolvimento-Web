@@ -28,13 +28,15 @@
                 case 'servicos':
                     echo '<target target="servicos" />';
                     break;
-
         }
-
     ?>
-     
+    <div class="sucesso">Formulário enviado com sucesso!</div><!--sucesso-->
+    <div class="erro">Algum erro ocorreu</div><!--erro-->
+        
+    <div class="overlay-loading">
+        <img src="<?php echo INCLUDE_PATH ?>images/ajax-loader.gif">
+    </div><!--overlay-loading-->
     
-
     <header>
         <div class="center">
         <div class="logo left"><a href="/">Logomarca</a></div><!--logo-->

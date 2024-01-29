@@ -16,10 +16,11 @@
         $data['sucesso'] = true;
     }else{
         $data['erro'] = true;
-    }
+    } 
+    
     
 
-    $data['retorno'] = 'sucesso';
+    
 
     die(json_encode($data));//formata o array para que o JavaScript possa entender
 ?>

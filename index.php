@@ -17,56 +17,7 @@
     <meta charset="UTF-8">
 </head>
 <body>
-<?php 
-                if(isset($_POST['acao']) &&['identificador'] == 'form_home'){
-                    //Enviei o formulario
-                    if($_POST['email'] != ''){
-                        $email = $_POST['email'];
-                        if(filter_var($email, FILTER_VALIDATE_EMAIL)){
-                            //tudo certom é um email.
-                            //só enviar
-                            $mail = new Email('vps.dankicode.com','testes@dankicode.com','gui123456', 'Guilherme');
-                            $mail->addAdress('ericmoraes1998@gmail.com','Eric');
-                            $corpo= "Email cadastrado na home do site: <hr>$email";
-                            $info = array('assunto'=>'um novo email cadastrado no site','corpo'=>$corpo);
-                            $mail->formatarEmail($info);
-                            if($mail->enviarEmail()){
-                                echo 'Enviado com sucesso!';
-                            }else{
-                                echo 'Algo deu errado';
-                            }
-                        }else{
-                            echo 'Não é um email valido.';
-                        }
-                        
-                    }else{
-                        echo 'Insira um email válido.';
-                    }
-                }else if(isset($_POST['acao']) && $_POST['identificador'] == 'form_contato'){
-                   /* $nome = $_POST['nome'];
-                    $email = $_POST['email'];
-                    $mensagem = $_POST['mensagem'];
-                    $telefone = $_POST['telefone'];*/
-                    $assunto = 'Nova mensagem no site!';
-                    $corpo = '';
-                    foreach ($_POST as $key => $value){
-                        $corpo.=ucfirst($key).": ".$value;
-                        $corpo.="<hr>";
-                    }
-                    $info = array('assunto'=>$assunto,'corpo'=>$corpo);
-                    $mail = new Email('vps.dankicode.com','testes@dankicode.com','gui123456', 'Guilherme');
-                    $mail->addAdress('ericmoraes1998@gmail.com','Eric');
-                    $mail->formatarEmail($info);
-                    if($mail->enviarEmail()){
-                        echo 'Enviado com sucesso!';
-                    }else{
-                        echo 'Algo deu errado';
-                    }
-
-                }
-            ?>
-    <base base="<?php echo INCLUDE_PATH; ?>"/>
-    
+<base base="<?php echo INCLUDE_PATH; ?>"/>
     <?php 
         $url = isset($_GET['url']) ? $_GET['url'] : 'home';
         switch ($url) {
@@ -151,6 +102,7 @@
    <script defer src='https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyDHPNQxozOzQSZ-djvWGOBUsHkBUoT_qH4&callback=Function.prototype'></script>
    <script src="<?php  echo INCLUDE_PATH; ?>js/map.js"></script>
     <?php } ?>        
-    <script src="<?php echo INCLUDE_PATH; ?>js/exemplo.js"></script>
+    <!--<script src="<?php echo INCLUDE_PATH; ?>js/exemplo.js"></script>-->
+    <script src="<?php  echo INCLUDE_PATH; ?>js/formularios.js"></script>
 </body>
 </html>

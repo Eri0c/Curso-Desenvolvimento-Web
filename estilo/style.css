@@ -144,6 +144,7 @@ section.banner-container {
     top: 0;
     z-index: 1;
     width: 100%;
+    display: none;
     height: 100%;
     background-size: cover;
     background-position: center;

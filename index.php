@@ -5,8 +5,9 @@
 <head>
     
     <title>Projeto 01</title>
+
     
-    <link rel="stylesheet" href="<?php echo INCLUDE_PATH; ?>fonts/css/all.css">
+    <link rel="stylesheet" href="<?php echo INCLUDE_PATH; ?>estilo/fontawesome.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" 
     rel="stylesheet">
     <link href="<?php echo INCLUDE_PATH;?>estilo/style.css" rel="stylesheet">

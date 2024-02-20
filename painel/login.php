@@ -29,7 +29,7 @@
                 die();
             }else{
                 //falhou
-                echo '<div class="erro-box"><i class="fa fa-times"></i> Usuário ou senha incorretos! </div>' ;
+                echo '<div class="erro-box"><i class="fa-solid fa-circle-xmark"></i> Usuário ou senha incorretos! </div>' ;
             }
         }
     ?>

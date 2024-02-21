@@ -76,7 +76,8 @@ html,body{
 
 
 header{
-    float: left;
+    position: relative;
+    left: 300px;
     padding: 10px 0;
     background: #78909c;
     width: calc(100% - 300px); 
@@ -102,11 +103,17 @@ header{
     font-size: 23px;
     color: white;
 }
-
+.menu-wraper{
+    width: 300px;
+}
 .menu{
-    overflow-y: auto;
+    overflow-x: hidden;
+    overfloy-y: auto;
     height: 100%;
     padding: 10px;
+    position: fixed;
+    left: 0;
+    top: 0;
     background: #607d8b;
     float: left;
     width: 300px;
@@ -144,4 +151,53 @@ div.box-usuario{
     color:white;
     font-size: 14;
     font-weight: normal;
+}
+
+/*Conteudo principal do painel */
+
+.w100{
+    width: 100%;
+
+}
+
+.w50{
+    width: 49%;
+    
+   
+}
+
+.left{
+    float: left;
+}
+
+.right{
+    float: right;
+}
+
+.content{
+    width: calc(100% - 300px);
+    position: relative;
+    left: 300px;
+    padding: 10px;
+}
+
+.box-content{
+    background: white;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+@media screen and (max-width: 768px){
+    .menu{
+        display: none;
+    }
+    
+    .content{
+        width: 100%;
+        left: 0;
+    }
+    .header{
+        left: 0;
+        width: 100%;
+    }
 }

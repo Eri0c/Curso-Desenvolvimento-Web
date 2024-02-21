@@ -21,10 +21,14 @@
             $sql = MySql::conectar()->prepare("SELECT * FROM `tb_admin.usuarios` WHERE user = ? AND password = ? ");//preparando uma QUERY(comando para executar no banco de dados)
             $sql->execute(array($user,$password));//array é uma sequencia com base nos pontos de interrogação e apartir de agora a query foi executada.
             if($sql->rowCount() == 1){//Quer dizer que existe o usuario com base nas informações passadas pelo login e senha do usuario
+                $info = $sql->fetch();//fecth() pega apenas uma coluna
                 //logamos com sucesso
                 $_SESSION['login'] = true;
                 $_SESSION['user'] = $user;
                 $_SESSION['password'] = $password;
+                $_SESSION['cargo'] = $info['cargo'];
+                $_SESSION['nome'] = $info['nome'];
+                $_SESSION['img'] = $info['img'];
                 header('Location: '.INCLUDE_PATH_PAINEL);
                 die();
             }else{

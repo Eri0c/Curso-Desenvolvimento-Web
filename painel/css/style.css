@@ -6,8 +6,12 @@
 }
 
 html,body{
+    
     height: 100%;
     background: rgb(225,225,225);
+}
+body{
+    overflow-x: hidden;
 }
 /*Pagina de login */
 
@@ -190,7 +194,10 @@ div.box-usuario{
 @media screen and (max-width: 768px){
     .menu{
         display: none;
+        padding: 0;
+        width: 0;
     }
+   
     
     .content{
         width: 100%;
@@ -199,5 +206,11 @@ div.box-usuario{
     .header{
         left: 0;
         width: 100%;
+    }
+}
+
+@media screen and (max-width: 400px){
+    .menu-wraper{
+        width: 200px;
     }
 }

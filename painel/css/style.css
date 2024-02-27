@@ -114,7 +114,7 @@ header{
     overflow-x: hidden;
     overfloy-y: auto;
     height: 100%;
-    padding: 10px;
+    padding: 10px 0;
     position: fixed;
     left: 0;
     top: 0;
@@ -144,6 +144,22 @@ div.box-usuario{
     -ms tranform:translate(-50%, -50%);
     font-size: 50px;
     color: #2F3D42;
+}
+.imagem-usuario{
+    display: inline-block;
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    border: 3px solid #2F3D42;
+
+}
+.imagem-usuario img{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    border-radius: 50%;
+    height: 100%;
 }
 
 .nome-usuario{
@@ -185,18 +201,78 @@ div.box-usuario{
     padding: 10px;
 }
 
-.box-content{
-    background: white;
-    padding: 10px;
-    margin-bottom: 10px;
+.box-content {
+    background-color: #f5f5f5;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+.box-content h2 {
+    margin-bottom: 15px;
+    font-size: 24px;
+}
+.box-metricas {
+    display: flex;
+    justify-content: space-between;
+}
+.box-metrica-single:nth-child(1) {
+    background-color: #e0f7fa; /* Cor para Usuários Online */
 }
 
-@media screen and (max-width: 768px){
-    .menu{
-        display: none;
-        padding: 0;
-        width: 0;
+.box-metrica-single:nth-child(2) {
+    background-color: #ffccbc; /* Cor para Total de Visitas */
+}
+
+.box-metrica-single:nth-child(3) {
+    background-color: #c8e6c9; /* Cor para Visitas Hoje */
+}
+.box-metrica-single {
+    flex: 1;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    margin-right: 15px;
+}
+
+.box-metrica-wraper {
+    text-align: center;
+}
+.box-metrica-wraper h2 {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+.box-metrica-wraper p {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.items-menu h2{
+    text-align: left;
+    font-weight: normal;
+    font-size: 17px;
+    background: #2F3D42;
+    color: white;
+    padding: 8px;
+}
+
+.items-menu a{
+    display: block;
+    padding: 8px;
+    font-weight: 300;
+    font-size: 16px;
+    text-decoration: none;
+    color: white;
+    border-bottom: 2px solid #2FJD42;
+}
+@media screen and (max-width: 1024px){
+    .box-metrica-single{
+        width: 100%;
     }
+};
+
+@media screen and (max-width: 768px){
+    
    
     
     .content{

@@ -39,6 +39,25 @@
             <p><?php echo  pegaCargo($_SESSION['cargo']); ?></p>
         </div><!--nome-usuario -->
    </div><!--box-usuario -->
+   <div class="items-menu">
+
+            <h2>Home</h2>
+            <h2>Cadastro</h2>
+            <a href="">Cadastrar Depoimento</a>
+            <a href="">Cadastrar Serviço</a>
+            <a href="">Cadastrar Slides</a>
+
+            <h2>Gestão</h2>
+            <a href="">Listar Depoimentos</a>
+            <a href=""> Listar Serviço</a>	
+            <a href=""> Listar Slides</a>	
+            <h2>Administração do Painel</h2>
+            <a href="">Editar Usuários</a>
+            <a href="">Adicionar Usuários</a>
+            <h2>Configuração Geral</h2>
+            <a href="">Editar </a>
+            	
+   </div><!--items-menu-->
    </div><!--menu-wraper -->
 </div><!--menu -->
 
@@ -57,8 +76,31 @@
 </header>
 <div class="content">
     <div class="box-content left w100">
+            <h2><i class="fa fa-home"></i>Painel de controle- <?php echo 'Nome da Empresa' ?></h2>
 
-    </div>
+            <div class="box-metricas"> 
+                <div class="box-metrica-single">
+                    <div class="box-metrica-wraper">
+                        <h2>Usuários Online</h2>
+                        <p>10</p>
+                    </div><!--box-metrica-wraper-->
+                </div><!--box-metrica-single-->
+                <div class="box-metrica-single">
+                    <div class="box-metrica-wraper">
+                        <h2>Total de Visitas</h2>
+                        <p>100</p>
+                    </div><!--box-metrica-wraper-->
+                </div><!--box-metrica-single-->
+                <div class="box-metrica-single">
+                    <div class="box-metrica-wraper">
+                        <h2>Visitas Hoje</h2>
+                        <p>3</p>
+                    </div><!--box-metrica-wraper-->
+                </div><!--box-metrica-single-->
+            </div><!--box-metricas-->
+
+            
+    </div><!--box-content left w100-->
     <!--
     <div class="box-content left w100">
             

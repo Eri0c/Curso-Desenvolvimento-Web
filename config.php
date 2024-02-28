@@ -1,6 +1,8 @@
 <?php
     // Inicialização da sessão para armazenar dados
     session_start();
+    // Define fuso horario padrão de São Paulo
+    date_default_timezone_set('America/Sao_Paulo');
 
     // Função de autoload para carregar automaticamente as classes necessárias
     $autoload = function($class){
@@ -25,6 +27,10 @@
     define('USER','root');
     define('PASSWORD','');
     define('DATABASE','projeto_01');
+
+    //Constantes para o painel de controle
+
+    define('NOME_EMPRESA','Nome da Empresa ');
 
     // Função para obter o nome do cargo com base no código
     function pegaCargo($cargo){

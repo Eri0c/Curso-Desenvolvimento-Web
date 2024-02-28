@@ -1,9 +1,12 @@
-<!-- index.php -->
-
 <?php
     // Inclui o arquivo de configuração (config.php)
     include('config.php');
 ?>
+ 
+<?php
+ //Atualiza o número de usuários online
+    Site::updateUsuarioOnline(); 
+ ?>
 
 <!DOCTYPE html>
 <html lang="pt-BR">
